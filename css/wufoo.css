@@ -1,0 +1,63 @@
+.wufoo label.desc, .wufoo legend.desc {
+	color: #666666;
+	font-size: 18px;
+	font-family: "futura-pt", sans-serif;
+}
+
+.wufoo input.text, .wufoo input.search, .wufoo textarea.textarea, .wufoo select.select {
+	border: 2px solid #01aea5;
+	background: none;
+	outline: 0;
+	border-radius: 0px;
+	box-sizing: border-box;
+	padding: 12px;
+	font-family: "futura-pt", sans-serif;
+}
+
+.wufoo textarea.textarea {
+	/*width: 94%;*/
+}
+
+select {
+	border-radius: 0px;
+	height: 52px;
+	text-indent: 2px;
+}
+
+.safari .wufoo select.select {
+	background: none;
+}
+
+input.btTxt {
+	font-family: "futura-pt", sans-serif;
+	display: inline-block;
+    background-color: #01bfb8;
+    box-shadow: 4px 4px rgba(1,1,1,0.16);
+    font-family: sans-serif;
+    padding: 19px 24px;
+    color: #ffffff;
+    text-decoration: none;
+    outline:0;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    float: right;
+}
+
+input.btTxt:hover {
+    box-shadow: 2px 2px rgba(1,1,1,0.16);
+    margin: 2px 0px 0px 2px;
+}
+
+input.btTxt:active {
+    box-shadow: 0px 0px rgba(1,1,1,0.16);
+    margin: 4px 0px 0px 4px;
+}
+
+@media only screen and (min-width: 30em) {
+	
+	input.btTxt {
+		width: auto;
+	}
+
+}

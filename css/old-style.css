@@ -1,0 +1,401 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
+
+/* BASICS */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "futura-pt", sans-serif;
+}
+
+/* HEADER */
+
+header {
+	width: 90%;
+	margin: 0px auto;
+    /*padding: 15px 0px;*/
+    overflow: auto;
+}
+
+.logo {
+	float: left;
+	width: 70px;
+	height: 70px;
+    margin: 15px 0px;
+}
+
+.logo a {
+    width: 70px;
+    height: 70px;
+    background-image:url('../img/logo-sm.gif');
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: -9999px;
+}
+
+nav a#pull {
+    display: none;
+}
+
+.navbar {
+	float: right;
+}
+
+.navbar .nav {
+	/*padding: 27px 0px 0px 0px;*/
+}
+
+.navbar .nav li{
+	display: inline;
+	text-transform: uppercase;
+	padding-left: 42px;
+	font-family: "futura-pt", sans-serif;
+	font-size: 14px;
+}
+
+.navbar .nav li a{
+	color: #333333;
+	text-decoration: none;
+	display: inline-block;
+	padding: 43px 0px 38px 0px;
+    border-bottom: 5px solid #ffffff;
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+
+.navbar .nav li a:hover{
+    border-bottom: 5px solid #333333;
+}
+
+.top-menu-view, .right-menu-view, .left-menu-view {
+        display: none;
+    }
+
+/* LEAD-IN */
+
+.lead-in {
+    background-color: #01bfb8;
+    padding: 120px 0px 0px 0px;
+    height: 264px;
+    position: relative;
+    overflow: hidden;
+}
+
+#rect-float-1 {
+    /*background-color: #01a59f;*/
+    background-color: rgba(0,141,136,0.69);
+    height: 400px;
+    position: absolute;
+    width: 171%;
+    bottom: 0%;
+    transform: rotate(-25deg);
+    right: 40%;
+}
+
+.lead-in h1 {
+    color: #ffffff;
+    font-size: 72px;
+    text-align: center;
+    margin: 0px 0px 77px 0px;
+    position: relative;
+    z-index: 1;
+}
+
+/* MAIN */
+
+.site-main {
+    background-color: #ffffff;
+    /*width: 80%;*/
+    width: 90%;
+    /*padding: 5%;*/
+    margin: 0px auto;
+    border: 1px solid #ebe7de;
+    box-shadow: 4px 4px rgba(1,1,1,0.16);
+    position: relative;
+    top: -114px;
+    z-index: 1;
+    overflow: auto;
+
+    /*height: 400px;*/
+}
+
+.content-container {
+    padding: 5%;
+    border-bottom: 1px solid #ebe7de;
+    clear: both;
+}
+
+/* PORTFOLIO */
+
+.project {
+    float: left;
+}
+
+.project.double {
+    width: 50%;
+    /*height: 280px;*/
+    background-color: #ff0000;
+}
+
+.project-info {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 100%;
+    display: block;
+}
+
+.frankenstein-test {
+    background-image: url('../img/projects/frankenstein-test.jpg');
+    width: 100%;
+    /*height: 280px;*/
+    overflow: hidden;
+    height: 280px;
+}
+
+.frankenstein-test:hover {
+    background-position: 0px -25px;
+}
+
+.project-name h3{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: #aaaaaa;
+	position: relative;
+	width: 100%;
+}
+
+.footer-inner-container{
+	position: absolute;
+	top: -168px;
+	width: 100%;
+	background-color: #cdcdcd;
+	height: 168px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        width: 100%;
+        margin: 0px auto;
+        overflow: auto;
+    }
+
+    .logo {
+        margin-left: 5%;
+    }
+
+    nav a#pull {
+        display: block;  
+        background-image: url('../img/menu-pull-icon-2.gif'); 
+        width: 100%;  
+        /*position: relative;*/
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        right: 5%;
+        top: -85px;
+        text-indent: -9999px;
+    }
+
+    .navbar {
+        float: none;
+        clear: left;
+        position: relative
+    }
+
+    nav {
+        background-color: #333333;
+    }
+
+    nav:after {
+        content:'';
+        display: block;
+        width:100%;
+        height: 50%;
+        background-color: #444444;
+        position: absolute;
+        top: 0;
+        -webkit-transition: 0.34s all ease;
+        transition: 0.55s all ease;
+        opacity: 1;
+    }
+
+    nav.expanded:after {
+        opacity: 0;
+    }
+
+    ul.nav {
+        display: none;
+        padding: 10px 0px;
+        z-index: 2;
+        position: relative;
+    }
+
+    /*.top-menu-view {
+        display: block;
+        width:100%;
+        height: 50%;
+        background-color: #444444;
+        position: absolute;
+        top: 0;
+        opacity: 1;
+        transition: 0.51s all ease;
+    }
+
+    nav.expanded .top-menu-view {
+        opacity: 0;
+    }*/
+
+    .left-menu-view {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: all 0.4s ease;
+    }
+
+    .right-menu-view {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        transition: all 0.3s ease;
+    }
+
+    nav.expanded .left-menu-view, nav.expanded .right-menu-view {
+        width: 0px;
+    }
+
+    .navbar .nav li{
+        display: block;
+        padding-left: 0%;
+        font-size: 21px;
+    }
+
+    .navbar .nav li a{
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        /*padding: 6% 5% 2% 5%;*/
+        padding: 4% 5%;
+        border-bottom: none;
+        width: 90%;
+        opacity: 0;
+        position:relative;
+        top: 10px;
+        /*transition: all ease 0.5s;*/
+        /*transition: opacity 0.2s 0.5s ease;*/
+    }
+
+    .navbar .nav li:nth-child(1) a{
+        transition: opacity 0.25s 0.25s ease, top 0.25s 0.25s ease-out;
+    }
+
+    .navbar .nav li:nth-child(2) a{
+        transition: opacity 0.25s 0.35s ease, top 0.25s 0.35s ease-out;
+    }
+
+    .navbar .nav li:nth-child(3) a{
+        transition: opacity 0.25s 0.45s ease, top 0.25s 0.45s ease-out;
+    }
+
+    .navbar .nav.expanded li a{
+        opacity: 1;
+        top: 0px;
+        /*padding: 4% 5% 4% 5%;*/
+        /*transition: opacity 0.2s 0s ease, padding 0.2s 0s ease;*/
+    }
+
+    .navbar .nav li a:hover{
+        border-bottom: none;
+    }
+
+}
