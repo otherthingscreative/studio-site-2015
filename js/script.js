@@ -34,6 +34,9 @@ $(function(){
 
     $('#project-modal').on('click', '.close', function(){
         $('#project-modal').removeClass('display');
+        setTimeout(function(){
+            $('#project-modal').css('z-index','-1');
+        },300);
     });
 
     // AJAX Project Objects
@@ -43,7 +46,7 @@ $(function(){
         phonetic_xhr.onreadystatechange = function () {
             if (phonetic_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = phonetic_xhr.responseText;
-                $('#project-modal').addClass('display');
+                $('#project-modal').css('z-index','2').addClass('display');
             }
         };
         phonetic_xhr.open('GET', 'projects/project-nmi.html');
