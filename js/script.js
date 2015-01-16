@@ -34,6 +34,7 @@ $(function(){
 
     $('#project-modal').on('click', '.close', function(){
         $('#project-modal').removeClass('display');
+        $('body').removeClass('modal-open');
         setTimeout(function(){
             $('#project-modal').css('z-index','-1');
         },300);
@@ -47,6 +48,7 @@ $(function(){
             if (phonetic_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = phonetic_xhr.responseText;
                 $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
             }
         };
         phonetic_xhr.open('GET', 'projects/project-nmi.html');
@@ -60,12 +62,10 @@ $(function(){
     // This if statement will not reload the script if resized from mobile to desktop after load. This is acceptable now, but look for another solution
     // Perhaps reading the window size upon a resize is an acceptable, if inefficient, answer
 
-    scrollorama.animate("#rect-float-1",{ duration: 200, delay: -100, property:"top", end: 60 });
+    scrollorama.animate("#rect-float-1",{ duration: 1000, delay: -100, property:"top", end: 60 });
+    scrollorama.animate("#rect-float-2",{ duration: 500, delay: -100, property:"top", end: 60 });
 
     if (window.matchMedia("only screen and (min-width: 23em)").matches) {
-
-    // scrollorama.animate("#fractal-shapes-1",{ duration: windowHeight, property:"top", end: 68 });
-    // scrollorama.animate("#fractal-shapes-1",{ duration: windowHeight, property:"left", end: -80 });
 
     scrollorama.animate("#logos-circle",{ duration: 300, delay: 100, property:"top", end: 1, easing: "easeOutQuad" });
     scrollorama.animate("#logos-circle",{ duration: 300, delay: 100, property:"left", end: 168, easing: "easeOutQuad" });
