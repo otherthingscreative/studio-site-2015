@@ -27,9 +27,44 @@ $(function(){
 
     // Project Calls
 
-    $('.project').on('click', function(e){
+    $('.second-city').on('click', function(e){
+        e.preventDefault();
+        secondCityModal();
+    });
+
+    $('.new-media-institute').on('click', function(e){
+        e.preventDefault();
+        newMediaModal();
+    });
+
+    $('.chicago-filmmakers').on('click', function(e){
+        e.preventDefault();
+        chicagoFilmmakersModal();
+    });
+
+    $('.phonetic-classic').on('click', function(e){
         e.preventDefault();
         phoneticModal();
+    });
+
+    $('.monsters-are-people').on('click', function(e){
+        e.preventDefault();
+        monstersModal();
+    });
+
+    $('.ahs-characters').on('click', function(e){
+        e.preventDefault();
+        ahsModal();
+    });
+
+    $('.wfc-group').on('click', function(e){
+        e.preventDefault();
+        wfcModal();
+    });
+
+    $('.easter-seals').on('click', function(e){
+        e.preventDefault();
+        easterSealsModal();
     });
 
     $('#project-modal').on('click', '.close', function(){
@@ -42,6 +77,45 @@ $(function(){
 
     // AJAX Project Objects
 
+    function secondCityModal(){
+        var secondCity_xhr = new XMLHttpRequest();
+        secondCity_xhr.onreadystatechange = function () {
+            if (secondCity_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = secondCity_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        secondCity_xhr.open('GET', 'projects/project-second-city.html');
+        secondCity_xhr.send();
+    }
+
+    function newMediaModal(){
+        var newMedia_xhr = new XMLHttpRequest();
+        newMedia_xhr.onreadystatechange = function () {
+            if (newMedia_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = newMedia_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        newMedia_xhr.open('GET', 'projects/project-nmi.html');
+        newMedia_xhr.send();
+    }
+
+    function chicagoFilmmakersModal(){
+        var chicagoFilmmakers_xhr = new XMLHttpRequest();
+        chicagoFilmmakers_xhr.onreadystatechange = function () {
+            if (chicagoFilmmakers_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = chicagoFilmmakers_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        chicagoFilmmakers_xhr.open('GET', 'projects/project-chicago-filmmakers.html');
+        chicagoFilmmakers_xhr.send();
+    }
+
     function phoneticModal(){
         var phonetic_xhr = new XMLHttpRequest();
         phonetic_xhr.onreadystatechange = function () {
@@ -51,8 +125,60 @@ $(function(){
                 $('body').addClass('modal-open');
             }
         };
-        phonetic_xhr.open('GET', 'projects/project-nmi.html');
+        phonetic_xhr.open('GET', 'projects/project-phonetic.html');
         phonetic_xhr.send();
+    }
+
+    function monstersModal(){
+        var monsters_xhr = new XMLHttpRequest();
+        monsters_xhr.onreadystatechange = function () {
+            if (monsters_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = monsters_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        monsters_xhr.open('GET', 'projects/project-monsters.html');
+        monsters_xhr.send();
+    }
+
+    function ahsModal(){
+        var ahs_xhr = new XMLHttpRequest();
+        ahs_xhr.onreadystatechange = function () {
+            if (ahs_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = ahs_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        ahs_xhr.open('GET', 'projects/project-ahs.html');
+        ahs_xhr.send();
+    }
+
+    function wfcModal(){
+        var wfc_xhr = new XMLHttpRequest();
+        wfc_xhr.onreadystatechange = function () {
+            if (wfc_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = wfc_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        wfc_xhr.open('GET', 'projects/project-wfc.html');
+        wfc_xhr.send();
+    }
+
+    function easterSealsModal(){
+        var easterSeals_xhr = new XMLHttpRequest();
+        easterSeals_xhr.onreadystatechange = function () {
+            if (easterSeals_xhr.readyState === 4) {
+                document.getElementById('project-modal').innerHTML = easterSeals_xhr.responseText;
+                $('#project-modal').css('z-index','2').addClass('display');
+                $('body').addClass('modal-open');
+            }
+        };
+        easterSeals_xhr.open('GET', 'projects/project-easter-seals.html');
+        easterSeals_xhr.send();
     }
 
     // Scrollorama

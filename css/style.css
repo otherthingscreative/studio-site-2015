@@ -783,6 +783,46 @@ body.modal-open {
     border-bottom: 1px solid #e9e8e4;
 }
 
+.project-category span {
+    text-transform: uppercase;
+    padding: 20px 0px 20px 57px;
+    font-family: "futura-pt", sans-serif;
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.project-category span.branding {
+    background-image: url(../img/icons/branding.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.project-category span.illustration {
+    background-image: url(../img/icons/illustration.gif);
+    background-repeat: no-repeat;
+}
+
+.project-category span.motion {
+    background-image: url(../img/icons/motion.gif);
+    background-repeat: no-repeat;
+}
+
+.project-category span.print {
+    background-image: url(../img/icons/print.gif);
+    background-repeat: no-repeat;
+}
+
+.project-category span.strategy {
+    background-image: url(../img/icons/strategy.gif);
+    background-repeat: no-repeat;
+}
+
+.project-category span.web-design {
+    background-image: url(../img/icons/web.gif);
+    background-repeat: no-repeat;
+    background-position: 0px 5px;
+}
+
 .related-projects {
     padding: 50px 30px 100px 30px;
     max-width: 850px;
