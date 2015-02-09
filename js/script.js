@@ -71,8 +71,9 @@ $(function(){
         $('#project-modal').removeClass('display');
         $('body').removeClass('modal-open');
         setTimeout(function(){
-            $('#project-modal').css('z-index','-1');
+            $('#project-modal').css({'z-index':'-1', 'display':'none'});
         },300);
+        /* ^ Could the above setTimeout be our missing link for the fade-in? */
     });
 
     // AJAX Project Objects
@@ -82,8 +83,9 @@ $(function(){
         secondCity_xhr.onreadystatechange = function () {
             if (secondCity_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = secondCity_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
+                // $('body').addClass('modal-open').removeClass('mobile-z');
             }
         };
         secondCity_xhr.open('GET', 'projects/project-second-city.html');
@@ -95,7 +97,7 @@ $(function(){
         newMedia_xhr.onreadystatechange = function () {
             if (newMedia_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = newMedia_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -108,7 +110,7 @@ $(function(){
         chicagoFilmmakers_xhr.onreadystatechange = function () {
             if (chicagoFilmmakers_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = chicagoFilmmakers_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -121,7 +123,7 @@ $(function(){
         phonetic_xhr.onreadystatechange = function () {
             if (phonetic_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = phonetic_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -134,7 +136,7 @@ $(function(){
         monsters_xhr.onreadystatechange = function () {
             if (monsters_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = monsters_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -147,7 +149,7 @@ $(function(){
         ahs_xhr.onreadystatechange = function () {
             if (ahs_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = ahs_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -160,7 +162,7 @@ $(function(){
         wfc_xhr.onreadystatechange = function () {
             if (wfc_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = wfc_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -173,7 +175,7 @@ $(function(){
         easterSeals_xhr.onreadystatechange = function () {
             if (easterSeals_xhr.readyState === 4) {
                 document.getElementById('project-modal').innerHTML = easterSeals_xhr.responseText;
-                $('#project-modal').css('z-index','2').addClass('display');
+                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
                 $('body').addClass('modal-open');
             }
         };
@@ -189,7 +191,7 @@ $(function(){
     // Perhaps reading the window size upon a resize is an acceptable, if inefficient, answer
 
     scrollorama.animate("#rect-float-1",{ duration: 1000, delay: -100, property:"top", end: 60 });
-    scrollorama.animate("#rect-float-2",{ duration: 500, delay: -100, property:"top", end: 60 });
+    scrollorama.animate("#rect-float-2",{ duration: 200, delay: -100, property:"top", end: 0 });
 
     if (window.matchMedia("only screen and (min-width: 23em)").matches) {
 

@@ -46,17 +46,15 @@
 		</div>
 	</header>
 
-	<div id="project-modal"></div>
-
 	<div class="content-header scrollblock">
-		<h1>We make many things.</h1>
+		<h1>Things we've made</h1>
 		<div id="rect-float-1"></div>
 		<div id="rect-float-2"></div>
 	</div>
 
 	<div class="content-main" role="main">
 		<div class="project second-city featured-project">
-			<a href="#"><img src="img/projects/second-city/sc-snapshot.jpg" /></a>
+			<a href="#"><img src="img/projects/second-city/sc-snapshot.gif" /></a>
 		</div>
 		<div class="project new-media-institute">
 			<a href="#"><img src="img/projects/new-media-institute/nmi-snapshot.gif" /></a>
@@ -90,6 +88,50 @@
 		</div>
  	</footer>
 
+ 	<div id="project-modal"></div>
+
+ 	<script>
+
+ 		var redirect = window.location.href.slice(window.location.href.indexOf('?') + 1)
+ 		
+ 		if (redirect === 'identity') {
+ 			var newMedia_xhr = new XMLHttpRequest();
+	        newMedia_xhr.onreadystatechange = function () {
+	            if (newMedia_xhr.readyState === 4) {
+	                document.getElementById('project-modal').innerHTML = newMedia_xhr.responseText;
+	                $('#project-modal').css('z-index','2').addClass('display');
+	                $('body').addClass('modal-open');
+	            }
+	        };
+	        newMedia_xhr.open('GET', 'projects/project-nmi.html');
+	        newMedia_xhr.send();
+ 		}
+ 		else if (redirect === 'digital') {
+ 			var chicagoFilmmakers_xhr = new XMLHttpRequest();
+	        chicagoFilmmakers_xhr.onreadystatechange = function () {
+	            if (chicagoFilmmakers_xhr.readyState === 4) {
+	                document.getElementById('project-modal').innerHTML = chicagoFilmmakers_xhr.responseText;
+	                $('#project-modal').css('z-index','2').addClass('display');
+	                $('body').addClass('modal-open');
+	            }
+	        };
+	        chicagoFilmmakers_xhr.open('GET', 'projects/project-chicago-filmmakers.html');
+	        chicagoFilmmakers_xhr.send();
+ 		}
+ 		else if (redirect === 'motion') {
+ 			var easterSeals_xhr = new XMLHttpRequest();
+	        easterSeals_xhr.onreadystatechange = function () {
+	            if (easterSeals_xhr.readyState === 4) {
+	                document.getElementById('project-modal').innerHTML = easterSeals_xhr.responseText;
+	                $('#project-modal').css('z-index','2').addClass('display');
+	                $('body').addClass('modal-open');
+	            }
+	        };
+	        easterSeals_xhr.open('GET', 'projects/project-easter-seals.html');
+	        easterSeals_xhr.send();
+ 		}
+
+ 	</script>
 
 </body>
 </html>
