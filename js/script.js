@@ -214,8 +214,8 @@ $(function(){
     scrollorama.animate("#responsive-circle",{ duration: 300, delay: 575, property:"top", end: 211, easing: "easeOutQuad" });
     scrollorama.animate("#responsive-circle",{ duration: 300, delay: 575, property:"left", end: 10, easing: "easeOutQuad" });
 
-    scrollorama.animate("#websites-apps-circle",{ duration: 300, delay: 625, property:"top", end: 297, easing: "easeOutQuad" });
-    scrollorama.animate("#websites-apps-circle",{ duration: 300, delay: 625, property:"left", end: 92, easing: "easeOutQuad" });
+    // scrollorama.animate("#websites-apps-circle",{ duration: 300, delay: 625, property:"top", end: 297, easing: "easeOutQuad" });
+    // scrollorama.animate("#websites-apps-circle",{ duration: 300, delay: 625, property:"left", end: 92, easing: "easeOutQuad" });
 
 
     scrollorama.animate("#scripting-circle",{ duration: 300, delay: 900, property:"top", start: 145, end: 1, easing: "easeOutQuad" });
