@@ -5,13 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Other Things Creative</title>
 
-	<script src="//use.typekit.net/dhw6dum.js"></script>
+	<script src="//use.typekit.net/tqg0gxw.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-34483440-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type='application/javascript' src='js/fastclick.js'></script>
 	<script src="js/jquery.scrollorama.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/respond.min.js"></script>
 
 	<!-- <link rel="stylesheet" href="css/old-style.css"> -->
 	<link rel="stylesheet" href="css/style.css">
@@ -33,9 +45,9 @@
 			      <!-- Add in a div a rework, don't style on scaffolding -->
 			      <div class="main-nav-wrapper">
 				      <ul class="nav">
-				        <li><a href="portfolio.html">Things We Make</a></li>
-				        <li><a href="about.html">Who We Are</a></li>
-				        <li><a href="contact.html">Contact Us</a></li>
+				        <li><a href="portfolio.html">Things we’ve made</a></li>
+				        <li><a href="about.html">About us</a></li>
+				        <li><a href="contact.html">Say hello</a></li>
 				      </ul>
 				      <img class="left-menu-view" src="img/menu-expand-left.png" />
 			      	  <img class="right-menu-view" src="img/menu-expand-right.png" />
@@ -47,17 +59,17 @@
 	</header>
 
 	<div class="content-header scrollblock">
-		<h1>Things we've made</h1>
+		<h1>Please enjoy the selection.</h1>
 		<div id="rect-float-1"></div>
 		<div id="rect-float-2"></div>
 	</div>
 
 	<div class="content-main" role="main">
 		<div class="project second-city featured-project">
-			<a href="#"><img src="img/projects/second-city/sc-snapshot.gif" /></a>
+			<a href="#"><img src="img/projects/second-city/sc-snapshot.jpg" /></a>
 		</div>
 		<div class="project new-media-institute">
-			<a href="#"><img src="img/projects/new-media-institute/nmi-snapshot.gif" /></a>
+			<a href="#"><img src="img/projects/new-media-institute/nmi-snapshot.jpg" /></a>
 		</div>
 		<div class="project chicago-filmmakers">
 			<a href="#"><img src="img/projects/chicago-filmmakers/cf-snapshot.jpg" /></a>
@@ -65,13 +77,13 @@
 		<div class="project phonetic-classic featured-project pull-right">
 			<a href="#"><img src="img/projects/phonetic-classic/pc-snapshot.jpg" /></a>
 		</div>
-		<div class="project monsters-are-people">
-			<a href="#"><img src="img/projects/monsters/monsters-snapshot.jpg" /></a>
+		<div class="project easter-seals">
+			<a href="#"><img src="img/projects/easter-seals/es-snapshot.jpg" /></a>
 		</div>
-		<div class="project">
-			<img src="img/placeholder-content/grey-placeholder.gif" />
+		<div class="project ahs-characters">
+			<a href="#"><img src="img/projects/ahs-characters/ahs-snapshot.jpg" /></a>
 		</div>
-		<div class="project ahs-characters featured-project">
+		<!-- <div class="project ahs-characters featured-project">
 			<a href="#"><img src="img/projects/ahs-characters/ahs-snapshot.jpg" /></a>
 		</div>
 		<div class="project wfc-group">
@@ -79,12 +91,12 @@
 		</div>
 		<div class="project easter-seals">
 			<a href="#"><img src="img/projects/easter-seals/es-snapshot.jpg" /></a>
-		</div>
+		</div> -->
 	</div>
 
 	<footer id="site-footer" role="contentinfo">
 		<div class="footer-inner-container">
-			<a href="contact.html" class="contact-us">Contact Us</a>
+			<a href="contact.html" class="contact-us">Give us a buzz  &raquo;</a>
 		</div>
  	</footer>
 
@@ -94,7 +106,7 @@
 
  		var redirect = window.location.href.slice(window.location.href.indexOf('?') + 1)
  		
- 		if (redirect === 'identity') {
+ 		if (redirect === 'nmi') {
  			var newMedia_xhr = new XMLHttpRequest();
 	        newMedia_xhr.onreadystatechange = function () {
 	            if (newMedia_xhr.readyState === 4) {
@@ -106,7 +118,7 @@
 	        newMedia_xhr.open('GET', 'projects/project-nmi.html');
 	        newMedia_xhr.send();
  		}
- 		else if (redirect === 'digital') {
+ 		else if (redirect === 'chifilm') {
  			var chicagoFilmmakers_xhr = new XMLHttpRequest();
 	        chicagoFilmmakers_xhr.onreadystatechange = function () {
 	            if (chicagoFilmmakers_xhr.readyState === 4) {
@@ -118,7 +130,7 @@
 	        chicagoFilmmakers_xhr.open('GET', 'projects/project-chicago-filmmakers.html');
 	        chicagoFilmmakers_xhr.send();
  		}
- 		else if (redirect === 'motion') {
+ 		else if (redirect === 'easterseals') {
  			var easterSeals_xhr = new XMLHttpRequest();
 	        easterSeals_xhr.onreadystatechange = function () {
 	            if (easterSeals_xhr.readyState === 4) {
@@ -129,6 +141,43 @@
 	        };
 	        easterSeals_xhr.open('GET', 'projects/project-easter-seals.html');
 	        easterSeals_xhr.send();
+ 		}
+ 		else if (redirect === 'secondcity') {
+ 			var secondCity_xhr = new XMLHttpRequest();
+	        secondCity_xhr.onreadystatechange = function () {
+	            if (secondCity_xhr.readyState === 4) {
+	                document.getElementById('project-modal').innerHTML = secondCity_xhr.responseText;
+	                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
+	                $('body').addClass('modal-open');
+	                // $('body').addClass('modal-open').removeClass('mobile-z');
+	            }
+	        };
+	        secondCity_xhr.open('GET', 'projects/project-second-city.html');
+	        secondCity_xhr.send();
+ 		}
+ 		else if (redirect === 'phonetic') {
+ 			var phonetic_xhr = new XMLHttpRequest();
+	        phonetic_xhr.onreadystatechange = function () {
+	            if (phonetic_xhr.readyState === 4) {
+	                document.getElementById('project-modal').innerHTML = phonetic_xhr.responseText;
+	                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
+	                $('body').addClass('modal-open');
+	            }
+	        };
+	        phonetic_xhr.open('GET', 'projects/project-phonetic.html');
+	        phonetic_xhr.send();
+ 		}
+ 		else if (redirect === 'horror') {
+ 			var ahs_xhr = new XMLHttpRequest();
+	        ahs_xhr.onreadystatechange = function () {
+	            if (ahs_xhr.readyState === 4) {
+	                document.getElementById('project-modal').innerHTML = ahs_xhr.responseText;
+	                $('#project-modal').css({'z-index':'2', 'display':'block'}).addClass('display');
+	                $('body').addClass('modal-open');
+	            }
+	        };
+	        ahs_xhr.open('GET', 'projects/project-ahs.html');
+	        ahs_xhr.send();
  		}
 
  	</script>
